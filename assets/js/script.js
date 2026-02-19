@@ -7,6 +7,8 @@ const SOCIAL_LINKS = {
   linkedin: 'https://www.linkedin.com/in/tharindu-thilakshana-de-zoysa-1606a2274/',
 };
 
+const FORM_ENDPOINT = 'https://formspree.io/f/xnjbzyog';
+
 // ---- Navbar Active Link & Smooth Scroll for same-page anchors ----
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-social]')?.forEach((el) => {
@@ -44,15 +46,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Contact form handler (basic validation + UX)
+  // Contact form handler (validation + Formspree submission)
   const form = document.getElementById('contactForm');
   if (form) {
     const status = document.getElementById('formStatus');
+    const submitBtn = form.querySelector('button[type="submit"]');
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const data = new FormData(form);
       const name = (data.get('name') || '').toString().trim();
       const email = (data.get('email') || '').toString().trim();
+      const subject = (data.get('subject') || '').toString().trim();
+      const phone = (data.get('phone') || '').toString().trim();
+      const project = (data.get('project') || '').toString();
+      const budget = (data.get('budget') || '').toString();
+      const pref = (data.get('pref') || '').toString();
       const message = (data.get('message') || '').toString().trim();
       if (!name || !email || !message) {
         if (status) { status.textContent = 'Please fill in name, email, and message.'; status.style.color = 'var(--warning)'; }
@@ -62,8 +70,36 @@ document.addEventListener('DOMContentLoaded', () => {
         if (status) { status.textContent = 'Please enter a valid email address.'; status.style.color = 'var(--warning)'; }
         return;
       }
-      if (status) { status.textContent = 'Thanks, I\'ll get back to you!'; status.style.color = 'var(--electric-blue-2)'; }
-      form.reset();
+      if (status) { status.textContent = 'Sending...'; status.style.color = 'var(--electric-blue-2)'; }
+      if (submitBtn) submitBtn.disabled = true;
+
+      fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name,
+          email,
+          subject,
+          phone,
+          project,
+          budget,
+          preferred_contact: pref,
+          message,
+        }),
+      })
+        .then(async (res) => {
+          if (res.ok) return true;
+          const err = await res.json().catch(() => ({}));
+          throw new Error(err?.error || 'Failed to send. Please try again.');
+        })
+        .then(() => {
+          if (status) { status.textContent = 'Thanks! Your message has been sent.'; status.style.color = 'var(--success, #3ddcff)'; }
+          form.reset();
+        })
+        .catch((err) => {
+          if (status) { status.textContent = err.message || 'Something went wrong. Please try again.'; status.style.color = 'var(--warning, #ff7a7a)'; }
+        })
+        .finally(() => { if (submitBtn) submitBtn.disabled = false; });
     });
   }
 });
