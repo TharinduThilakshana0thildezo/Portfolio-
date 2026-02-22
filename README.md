@@ -1,26 +1,69 @@
-🚀 Tharindu Thilakshana — Portfolio Website
+🚀 Tharindu Thilakshana — Developer Portfolio
 
-Welcome to my personal portfolio website repository. This site showcases my projects, technical skills, and experience as a software engineer, along with selected work in AI, full-stack development, and software engineering.
+🌐 Live Website:
+👉 https://tharinduthilakshana0thildezo.github.io/Portfolio-/
 
-🔗 Live Website:
-👉 https://tharinduthilakshana0thildezo.github.io/Portfolio-/index.html
+📌 About This Project
+
+This repository contains the source code for my personal portfolio website, designed to showcase my projects, technical skills, and experience as a Software Engineer.
+
+The portfolio acts as my digital resume and demonstrates my capabilities in building modern, scalable, and intelligent applications.
 
 👨‍💻 About Me
 
-I am Tharindu Thilakshana, a software engineer passionate about building intelligent systems, web applications, and innovative digital solutions. My interests include:
+Tharindu Thilakshana
+Software Engineer | Full-Stack Developer | AI Enthusiast
 
-Artificial Intelligence & Autonomous Agents
+I specialize in developing:
 
-Full-Stack Web Development
+🌐 Full-Stack Web Applications
 
-Software Engineering
+🤖 AI & Machine Learning Systems
 
-Automation & Productivity Tools
+📱 Mobile Applications
 
-This portfolio serves as a centralized hub for my technical work, achievements, and ongoing projects.
+🧩 Browser Extensions
 
-🛠️ Tech Stack
+⚙️ Automation Tools
 
+🌍 IoT Solutions
+
+✨ Features of the Portfolio
+
+✔️ Modern responsive design
+✔️ Project showcase section
+✔️ Skills & technologies overview
+✔️ Contact information
+✔️ Smooth navigation
+✔️ Mobile-friendly layout
+✔️ Clean UI/UX
+
+🧠 Highlighted Projects
+🤖 AI Resume Analyzer
+
+AI system that evaluates resumes using Natural Language Processing and provides improvement suggestions.
+
+📄 Invoice Management System
+
+Web dashboard for creating invoices, tracking payments, and managing clients.
+
+🤖 Telegram Subtitle Downloader Bot
+
+Automated bot that fetches Sinhala subtitles for movies and TV series.
+
+📱 GoFitness Mobile App
+
+Fitness tracking application with personalized workout plans.
+
+✈️ Holiday Central Travel Platform
+
+Booking system for flights, hotels, and travel packages.
+
+🏎️ F1 IoT Car Tracker
+
+Real-time GPS tracking system for racing vehicles.
+
+🛠️ Technologies Used
 Frontend
 
 HTML5
@@ -29,54 +72,91 @@ CSS3
 
 JavaScript
 
+React
+
+Tailwind CSS
+
+Backend
+
+Node.js
+
+Express
+
+Flask
+
+Databases
+
+MongoDB
+
+SQLite
+
+Supabase
+
 Tools & Platforms
 
 Git & GitHub
 
-VS Code
+Firebase
 
-GitHub Pages (Hosting)
+REST APIs
 
-Personal portfolio sites are commonly used to showcase skills, projects, and professional background in a single accessible location.
+NLP Libraries
 
-📂 Features
-
-✔️ Modern responsive design
-✔️ Project showcase section
-✔️ Skills overview
-✔️ About me section
-✔️ Contact information
-✔️ Clean UI with smooth navigation
-
-📸 Sections Included
-
-Home / Introduction
-
-About Me
-
-Skills
-
-Projects
-
-Contact
-
-🚀 How to Run Locally
-# Clone the repository
-git clone https://github.com/tharinduthilakshana0thildezo/Portfolio-.git
-
-# Navigate into the folder
+📂 Project Structure
+Portfolio/
+│
+├── index.html
+├── assets/
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── projects/
+└── README.md
+⚙️ How to Run Locally
+1️⃣ Clone the Repository
+git clone https://github.com/TharinduThilakshana0thildezo/Portfolio-.git
+2️⃣ Open Project Folder
 cd Portfolio-
+3️⃣ Run the Website
 
-# Open index.html in your browser
+Open index.html in your browser.
+
+🚀 Deployment
+
+This portfolio is deployed using GitHub Pages.
+
+To deploy your own version:
+
+Fork the repository
+
+Go to Repository Settings
+
+Enable GitHub Pages
+
+Select the main branch
 
 📬 Contact
 
-If you’d like to collaborate, hire me, or discuss opportunities:
+💻 GitHub: https://github.com/TharinduThilakshana0thildezo
 
-GitHub: https://github.com/tharinduthilakshana0thildezo
+🌐 Portfolio: https://tharinduthilakshana0thildezo.github.io/Portfolio-/
 
-Portfolio: https://tharinduthilakshana0thildezo.github.io/Portfolio-/
+🤝 Contributing
+
+Contributions and suggestions are welcome.
+
+Fork the repository
+
+Create a new branch
+
+Commit your changes
+
+Open a Pull Request
+
+📄 License
+
+This project is licensed under the MIT License.
 
 ⭐ Support
 
-If you like this project, consider giving it a ⭐ on GitHub — it helps and is appreciated.
+If you like this portfolio, give it a ⭐ on GitHub!
