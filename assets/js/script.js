@@ -142,6 +142,48 @@ window.addEventListener('load', () => {
   type();
 })();
 
+// ---- View Counter (Home) ----
+(function viewCounter() {
+  const countEl = document.getElementById('viewCount');
+  if (!countEl) return;
+  const path = encodeURIComponent(`${location.hostname}${location.pathname || '/index.html'}`);
+  const url = `https://api.visitorbadge.io/api/visitors?path=${path}`;
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const animateCount = (endValue) => {
+    if (prefersReduced) {
+      countEl.textContent = endValue.toLocaleString();
+      return;
+    }
+    const duration = 1200;
+    const startValue = 0;
+    const startTime = performance.now();
+    const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+    const step = (now) => {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const eased = easeOutCubic(progress);
+      const current = Math.round(startValue + (endValue - startValue) * eased);
+      countEl.textContent = current.toLocaleString();
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      const total = Number(data?.total);
+      if (Number.isFinite(total)) {
+        animateCount(total);
+      } else {
+        countEl.textContent = '--';
+      }
+    })
+    .catch(() => {
+      countEl.textContent = '--';
+    });
+})();
+
 // ---- Back to Top + Theme Toggle ----
 const backToTopBtn = document.getElementById('backToTop');
 const themeToggleBtn = document.getElementById('themeToggle');

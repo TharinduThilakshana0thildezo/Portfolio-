@@ -1,34 +1,38 @@
-🚀 Tharindu Thilakshana — Developer Portfolio
 
-🌐 Live Website:
-👉 https://tharinduthilakshana0thildezo.github.io/Portfolio-/
+# 🚀 Tharindu Thilakshana — Developer Portfolio
 
-📌 About This Project
+🌐 **Live Website**
+👉 [https://tharinduthilakshana0thildezo.github.io/Portfolio-/](https://tharinduthilakshana0thildezo.github.io/Portfolio-/)
 
-This repository contains the source code for my personal portfolio website, designed to showcase my projects, technical skills, and experience as a Software Engineer.
+![Portfolio Preview](assets/images/preview.png)
 
-The portfolio acts as my digital resume and demonstrates my capabilities in building modern, scalable, and intelligent applications.
+---
 
-👨‍💻 About Me
+## 📌 About This Project
 
-Tharindu Thilakshana
-Software Engineer | Full-Stack Developer | AI Enthusiast
+This repository contains the source code for my **personal developer portfolio website**, built to showcase my projects, technical expertise, and professional experience as a Software Engineer.
+
+The portfolio serves as my **digital resume**, demonstrating my ability to design and build modern, scalable, and intelligent applications across multiple domains including web, AI, mobile, automation, and IoT.
+
+---
+
+## 👨‍💻 About Me
+
+**Tharindu Thilakshana**
+💼 Software Engineer | 🌐 Full-Stack Developer | 🤖 AI Enthusiast
 
 I specialize in developing:
 
-🌐 Full-Stack Web Applications
+* 🌐 Full-Stack Web Applications
+* 🤖 AI & Machine Learning Systems
+* 📱 Mobile Applications
+* 🧩 Browser Extensions
+* ⚙️ Automation Tools
+* 🌍 IoT Solutions
 
-🤖 AI & Machine Learning Systems
+---
 
-📱 Mobile Applications
-
-🧩 Browser Extensions
-
-⚙️ Automation Tools
-
-🌍 IoT Solutions
-
-✨ Features of the Portfolio
+## ✨ Portfolio Features
 
 ✔️ Modern responsive design
 ✔️ Project showcase section
@@ -37,72 +41,73 @@ I specialize in developing:
 ✔️ Smooth navigation
 ✔️ Mobile-friendly layout
 ✔️ Clean UI/UX
+✔️ Optimized performance
+✔️ Organized project categorization
 
-🧠 Highlighted Projects
-🤖 AI Resume Analyzer
+---
 
-AI system that evaluates resumes using Natural Language Processing and provides improvement suggestions.
+## 🧠 Highlighted Projects
 
-📄 Invoice Management System
+### 🤖 AI Resume Analyzer
 
-Web dashboard for creating invoices, tracking payments, and managing clients.
+AI-powered system that evaluates resumes using Natural Language Processing (NLP) and provides improvement suggestions.
 
-🤖 Telegram Subtitle Downloader Bot
+### 📄 Invoice Management System
 
-Automated bot that fetches Sinhala subtitles for movies and TV series.
+Web dashboard for creating invoices, tracking payments, and managing clients efficiently.
 
-📱 GoFitness Mobile App
+### 🤖 Telegram Subtitle Downloader Bot
 
-Fitness tracking application with personalized workout plans.
+Automated Telegram bot that fetches Sinhala subtitles for movies and TV series.
 
-✈️ Holiday Central Travel Platform
+### 📱 GoFitness Mobile App
 
-Booking system for flights, hotels, and travel packages.
+Fitness tracking application featuring personalized workout plans and progress monitoring.
 
-🏎️ F1 IoT Car Tracker
+### ✈️ Holiday Central Travel Platform
 
-Real-time GPS tracking system for racing vehicles.
+Comprehensive booking system for flights, hotels, and travel packages.
 
-🛠️ Technologies Used
-Frontend
+### 🏎️ F1 IoT Car Tracker
 
-HTML5
+Real-time GPS tracking system designed for racing vehicles using IoT technologies.
 
-CSS3
+---
 
-JavaScript
+## 🛠️ Technologies Used
 
-React
+### 🎨 Frontend
 
-Tailwind CSS
+* HTML5
+* CSS3
+* JavaScript
+* React
+* Tailwind CSS
 
-Backend
+### ⚙️ Backend
 
-Node.js
+* Node.js
+* Express.js
+* Flask
 
-Express
+### 🗄️ Databases
 
-Flask
+* MongoDB
+* SQLite
+* Supabase
 
-Databases
+### 🔧 Tools & Platforms
 
-MongoDB
+* Git & GitHub
+* Firebase
+* REST APIs
+* NLP Libraries
 
-SQLite
+---
 
-Supabase
+## 📂 Project Structure
 
-Tools & Platforms
-
-Git & GitHub
-
-Firebase
-
-REST APIs
-
-NLP Libraries
-
-📂 Project Structure
+```
 Portfolio/
 │
 ├── index.html
@@ -112,51 +117,77 @@ Portfolio/
 │   └── images/
 ├── projects/
 └── README.md
-⚙️ How to Run Locally
-1️⃣ Clone the Repository
+```
+
+---
+
+## ⚙️ How to Run Locally
+
+### 1️⃣ Clone the Repository
+
+```bash
 git clone https://github.com/TharinduThilakshana0thildezo/Portfolio-.git
-2️⃣ Open Project Folder
+```
+
+### 2️⃣ Navigate to the Project Folder
+
+```bash
 cd Portfolio-
-3️⃣ Run the Website
+```
 
-Open index.html in your browser.
+### 3️⃣ Run the Website
 
-🚀 Deployment
+Simply open:
 
-This portfolio is deployed using GitHub Pages.
+```
+index.html
+```
 
-To deploy your own version:
+in your web browser.
 
-Fork the repository
+---
 
-Go to Repository Settings
+## 🚀 Deployment
 
-Enable GitHub Pages
+This portfolio is deployed using **GitHub Pages**.
 
-Select the main branch
+### To deploy your own version:
 
-📬 Contact
+1. Fork the repository
+2. Go to **Repository Settings → Pages**
+3. Enable GitHub Pages
+4. Select the **main branch**
+5. Save
 
-💻 GitHub: https://github.com/TharinduThilakshana0thildezo
+Your site will be live shortly.
 
-🌐 Portfolio: https://tharinduthilakshana0thildezo.github.io/Portfolio-/
+---
 
-🤝 Contributing
+## 📬 Contact
 
-Contributions and suggestions are welcome.
+💻 GitHub:
+[https://github.com/TharinduThilakshana0thildezo](https://github.com/TharinduThilakshana0thildezo)
 
-Fork the repository
+🌐 Portfolio:
+[https://tharinduthilakshana0thildezo.github.io/Portfolio-/](https://tharinduthilakshana0thildezo.github.io/Portfolio-/)
 
-Create a new branch
+📧 Feel free to reach out for collaborations, opportunities, or technical discussions.
 
-Commit your changes
+---
 
-Open a Pull Request
+## 🤝 Contributing
 
-📄 License
+Contributions, suggestions, and improvements are welcome.
 
-This project is licensed under the MIT License.
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Push to your fork
+5. Open a Pull Request
 
-⭐ Support
+---
 
-If you like this portfolio, give it a ⭐ on GitHub!
+## ⭐ Support
+
+If you like this portfolio, consider giving it a ⭐ on GitHub — it helps and motivates further development.
+

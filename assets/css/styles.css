@@ -304,6 +304,71 @@ a { color: inherit; text-decoration: none; }
 }
 .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
 
+.hero-counter {
+  position: absolute;
+  right: clamp(14px, 5vw, 56px);
+  top: 76%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.view-counter {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: linear-gradient(135deg, rgba(0,178,255,0.28), rgba(255,255,255,0.06));
+  box-shadow: 0 14px 32px rgba(0,178,255,0.28), inset 0 0 14px rgba(61,220,255,0.12);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  letter-spacing: 0.2px;
+  overflow: hidden;
+}
+
+.view-counter::before {
+  content: '';
+  position: absolute;
+  inset: -40% 30% auto -40%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2), rgba(255,255,255,0));
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.view-counter::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: inherit;
+  border: 1px solid rgba(255,255,255,0.08);
+  pointer-events: none;
+}
+
+.view-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 1.4px;
+}
+
+.view-divider {
+  width: 46px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(61,220,255,0.2), rgba(61,220,255,0.9), rgba(61,220,255,0.2));
+  box-shadow: 0 0 10px rgba(61,220,255,0.35);
+}
+
+.view-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-shadow: 0 0 16px rgba(61,220,255,0.35);
+}
+
 .hero-photo {
   position: relative;
   width: min(380px, 80vw);
@@ -696,6 +761,13 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 1024px) {
   .hero-grid { grid-template-columns: 1fr; text-align: center; }
   .hero-cta { justify-content: center; }
+  .hero-counter {
+    position: static;
+    transform: none;
+    margin: 24px auto 0;
+    display: flex;
+    justify-content: center;
+  }
   .about-grid, .projects-grid, .contact-grid { grid-template-columns: 1fr; }
   .grid { grid-template-columns: repeat(2,1fr); }
   .home-links-grid { grid-template-columns: 1fr 1fr; }
