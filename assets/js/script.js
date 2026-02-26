@@ -458,6 +458,35 @@ document.querySelectorAll('[data-reveal-stagger]').forEach((el) => staggerObserv
   startAutoplay();
 })();
 
+// ---- Project Image Lightbox ----
+(function projectLightbox() {
+  const lightbox = document.getElementById('projectLightbox');
+  const lightboxImg = document.getElementById('projectLightboxImg');
+  const backdrop = document.getElementById('projectLightboxBackdrop');
+  const closeBtn = document.getElementById('projectLightboxClose');
+  if (!lightbox || !lightboxImg) return;
+
+  function openLightbox(src) {
+    lightboxImg.src = src;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.project-card .project-thumb').forEach((img) => {
+    img.addEventListener('click', () => openLightbox(img.src));
+  });
+
+  if (backdrop) backdrop.addEventListener('click', closeLightbox);
+  if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+  });
+})();
+
 
 
 

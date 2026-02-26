@@ -622,7 +622,63 @@ a { color: inherit; text-decoration: none; }
   transition: transform 0.2s ease, box-shadow 0.3s ease, border-color 0.2s ease;
 }
 .project-card:hover { transform: translateY(-6px) rotateX(2deg) rotateY(-2deg); box-shadow: var(--shadow-strong); }
-.project-thumb { aspect-ratio: 16/10; object-fit: cover; width: 100%; }
+.project-thumb { aspect-ratio: 16/10; object-fit: cover; width: 100%; cursor: pointer; transition: filter 0.3s ease, transform 0.3s ease; }
+.project-thumb:hover { filter: brightness(1.15); transform: scale(1.02); }
+
+/* ====== Project Image Lightbox ====== */
+.project-lightbox {
+  position: fixed; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 2000;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.4s cubic-bezier(.4,0,.2,1), visibility 0.4s;
+}
+.project-lightbox.open {
+  opacity: 1; visibility: visible;
+}
+.project-lightbox-backdrop {
+  position: absolute; inset: 0;
+  background: rgba(7, 9, 15, 0.65);
+  backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
+  cursor: pointer;
+}
+.project-lightbox-card {
+  position: relative;
+  max-width: min(900px, 90vw);
+  max-height: 88vh;
+  border-radius: 24px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.04) 100%);
+  border: 1px solid rgba(61, 220, 255, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 178, 255, 0.15), inset 0 1px 0 rgba(255,255,255,0.12);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  transform: scale(0.85) translateY(30px);
+  transition: transform 0.45s cubic-bezier(.4,0,.2,1);
+  z-index: 1;
+}
+.project-lightbox.open .project-lightbox-card {
+  transform: scale(1) translateY(0);
+}
+.project-lightbox-card img {
+  width: 100%; display: block;
+  border-radius: 0;
+  max-height: 82vh;
+  object-fit: contain;
+}
+.project-lightbox-close {
+  position: absolute; top: 14px; right: 14px;
+  width: 36px; height: 36px;
+  border-radius: 50%; border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  color: #fff; font-size: 18px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.25s ease, transform 0.25s ease;
+  z-index: 2;
+}
+.project-lightbox-close:hover {
+  background: rgba(61, 220, 255, 0.3); transform: rotate(90deg);
+}
 .project-body { padding: 16px; }
 .project-actions { display: flex; gap: 10px; margin-top: 10px; }
 
